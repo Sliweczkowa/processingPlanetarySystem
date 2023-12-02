@@ -10,8 +10,11 @@ class Planet {
   }
   
   void drawPlanet() {
+    pushMatrix();
+    translate(x/2, y/2 + this.distanceFromSun);
     fill(this.planetColor);
-    circle(x/2, y/2 + this.distanceFromSun, this.planetDiameter);
+    circle(0, 0, this.planetDiameter);
+    popMatrix();
   }
 }
 
