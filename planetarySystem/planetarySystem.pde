@@ -1,20 +1,29 @@
 int x = 700;
 int y = 700;
+int n = 0;
 
 void settings() {
   size(x, y);
 }
 
 void setup() {
-  background(0);
   noStroke();
 }
 
 void draw() {
+  background(0);
   drawSun();
-  Mercury.drawPlanet();
-  Venus.drawPlanet();
-  Earth.drawPlanet();
-  Mars.drawPlanet();;
-  Jupiter.drawPlanet();
+  pushMatrix();
+  Mercury.drawPlanet(n);
+  Venus.drawPlanet(n);
+  Earth.drawPlanet(n);
+  Mars.drawPlanet(n);
+  Jupiter.drawPlanet(n);
+  
+  if(n == 359)
+    n = 0;
+  else
+    n++;
+  
+  popMatrix();
 }
