@@ -22,7 +22,8 @@ class CelestialBody {
     fill(this.bColor);
     circle(0, this.bDistanceFromAnchorPoint, this.bDiameter);
     //TODO: Refresh anchor point coordinates for moons; 
-    this.bCoordinates = new Point(screenX(0, this.bDistanceFromAnchorPoint), screenY(0, this.bDistanceFromAnchorPoint));
+    this.bCoordinates.x = screenX(0, this.bDistanceFromAnchorPoint);
+    this.bCoordinates.y = screenY(0, this.bDistanceFromAnchorPoint);
     popMatrix();
   }
 }
