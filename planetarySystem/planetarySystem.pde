@@ -18,9 +18,13 @@ void draw() {
   Earth.drawCelestialBody(n);
   Mars.drawCelestialBody(n);
   Jupiter.drawCelestialBody(n);
-  EarthMoon.drawCelestialBody(n);
-  MarsMoon0.drawCelestialBody(n);
-  MarsMoon1.drawCelestialBody(n);
+  Moon.drawCelestialBody(n);
+  Phobos.drawCelestialBody(n);
+  Deimos.drawCelestialBody(n);
+  Io.drawCelestialBody(n);
+  Europa.drawCelestialBody(n);
+  Ganymede.drawCelestialBody(n);
+  Callisto.drawCelestialBody(n);
   
   if(n == 359)
     n = 0;
