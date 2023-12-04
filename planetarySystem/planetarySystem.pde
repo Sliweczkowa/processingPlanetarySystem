@@ -12,13 +12,13 @@ void setup() {
 
 void draw() {
   background(0);
-  drawSun();
   pushMatrix();
-  Mercury.drawPlanet(n);
-  Venus.drawPlanet(n);
-  Earth.drawPlanet(n);
-  Mars.drawPlanet(n);
-  Jupiter.drawPlanet(n);
+  Sun.drawCelestialBody(n);
+  Mercury.drawCelestialBody(n);
+  Venus.drawCelestialBody(n);
+  Earth.drawCelestialBody(n);
+  Mars.drawCelestialBody(n);
+  Jupiter.drawCelestialBody(n);
   
   if(n == 359)
     n = 0;
