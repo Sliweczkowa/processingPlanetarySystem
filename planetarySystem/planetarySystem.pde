@@ -26,8 +26,5 @@ void draw() {
   Ganymede.drawCelestialBody(n);
   Callisto.drawCelestialBody(n);
   
-  if(n == 359)
-    n = 0;
-  else
-    n++;
+  n++;
 }
