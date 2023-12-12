@@ -17,10 +17,14 @@ class CelestialBody {
   
   void drawCelestialBody(int n) {
     pushMatrix();
-    translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y);
-    rotate(radians((n * bRotationAngle) % 360));
+    translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y, 0);
+    rotateZ(radians((n * bRotationAngle) % 360));
+    pushMatrix();
+    translate(0, this.bDistanceFromAnchorPoint, 0);
     fill(this.bColor);
-    circle(0, this.bDistanceFromAnchorPoint, this.bDiameter);
+    lights();
+    sphere(this.bDiameter/2);
+    popMatrix();
     this.bCoordinates.x = screenX(0, this.bDistanceFromAnchorPoint);
     this.bCoordinates.y = screenY(0, this.bDistanceFromAnchorPoint);
     popMatrix();

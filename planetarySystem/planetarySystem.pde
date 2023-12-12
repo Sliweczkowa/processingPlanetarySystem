@@ -3,11 +3,12 @@ int y = 700;
 int n = 0;
 
 void settings() {
-  size(x, y);
+  size(x, y, P3D);
 }
 
 void setup() {
   noStroke();
+  lights();
 }
 
 void draw() {
