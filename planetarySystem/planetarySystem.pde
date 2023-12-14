@@ -8,7 +8,7 @@ PShape globeSun;
 PImage textureSaturno;
 PShape globePlanet;
 
-Sun sun = new Sun(201, new Point(x/2, y/2), 0, 0);
+Sun sun = new Sun(201, new Point(x/2, y/2, 0), 0, 0);
 
 Planet mercury = new Planet(#808080, 7, sun.bCoordinates, 100 + 20 + 3, 4.1);
 Planet venus = new Planet(#FFA500, 15, sun.bCoordinates, 100 + 20 + 7 + 20 + 7, 1.6);

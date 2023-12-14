@@ -8,7 +8,7 @@ class Saturno {
     this.bAnchorPointCoordinates = bAnchorPointCoordinates;
     this.bDistanceFromAnchorPoint = bDistanceFromAnchorPoint;
     this.bRotationAngle = bRotationAngle;
-    bCoordinates = new Point(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y + bDistanceFromAnchorPoint);
+    bCoordinates = new Point(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y + bDistanceFromAnchorPoint, bAnchorPointCoordinates.z);
   }
 
   void drawSaturno(int n) {
