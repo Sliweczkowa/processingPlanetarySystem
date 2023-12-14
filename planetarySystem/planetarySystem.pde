@@ -8,7 +8,7 @@ PShape globeSun;
 PImage textureSaturno;
 PShape globePlanet;
 
-Sun sun = new Sun(#FFFF00, 201, new Point(x/2, y/2), 0, 0);
+Sun sun = new Sun(201, new Point(x/2, y/2), 0, 0);
 
 Planet mercury = new Planet(#808080, 7, sun.bCoordinates, 100 + 20 + 3, 4.1);
 Planet venus = new Planet(#FFA500, 15, sun.bCoordinates, 100 + 20 + 7 + 20 + 7, 1.6);
@@ -24,7 +24,7 @@ Moon europa = new Moon(#DCDCDC, 3, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 1, 4);
 Moon ganymede = new Moon(#DCDCDC, 5, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 3 + 3 + 2, 1.6);
 Moon callisto = new Moon(#DCDCDC, 5, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 3 + 3 + 5 + 3 + 2, 0.8);
 
-Saturno saturno = new Saturno(#FFFFFF, 0, sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17 + 20 + 9 + 40 + 40 + 80, 0.5);
+Saturno saturno = new Saturno(sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17 + 20 + 9 + 40 + 40 + 80, 0.5);
 
 
 void settings() {

@@ -1,13 +1,11 @@
 class Sun {
-  int bColor;
   int bDiameter;
   Point bAnchorPointCoordinates;
   int bDistanceFromAnchorPoint;
   float bRotationAngle;
   Point bCoordinates;
   
-  Sun(int bColor, int bDiameter, Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
-    this.bColor = bColor;
+  Sun(int bDiameter, Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
     this.bDiameter = bDiameter;
     this.bAnchorPointCoordinates = bAnchorPointCoordinates;
     this.bDistanceFromAnchorPoint = bDistanceFromAnchorPoint;

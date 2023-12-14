@@ -1,14 +1,10 @@
 class Saturno {
-  int bColor;
-  int bDiameter;
   Point bAnchorPointCoordinates;
   int bDistanceFromAnchorPoint;
   float bRotationAngle;
   Point bCoordinates;
   
-  Saturno(int bColor, int bDiameter, Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
-    this.bColor = bColor;
-    this.bDiameter = bDiameter;
+  Saturno(Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
     this.bAnchorPointCoordinates = bAnchorPointCoordinates;
     this.bDistanceFromAnchorPoint = bDistanceFromAnchorPoint;
     this.bRotationAngle = bRotationAngle;
