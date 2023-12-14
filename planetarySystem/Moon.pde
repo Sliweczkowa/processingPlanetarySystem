@@ -21,7 +21,6 @@ class Moon {
     rotateZ(radians((n * bRotationAngle) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
-    lights();
     fill(this.bColor);
     box(this.bDiameter);
     this.bCoordinates.x = screenX(0, 0, 0);

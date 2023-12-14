@@ -19,8 +19,8 @@ class Sun {
     rotateZ(radians((n * bRotationAngle) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
-    lights();
     shape(globeSun);
+    pointLight(250, 255, 234, 0, 0, 0);
     this.bCoordinates.x = screenX(0, 0, 0);
     this.bCoordinates.y = screenY(0, 0, 0);
     popMatrix();

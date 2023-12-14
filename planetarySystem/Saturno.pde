@@ -17,7 +17,6 @@ class Saturno {
     rotateZ(radians((n * bRotationAngle) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
-    lights();
     shape(globePlanet);
     this.bCoordinates.x = screenX(0, 0, 0);
     this.bCoordinates.y = screenY(0, 0, 0);
