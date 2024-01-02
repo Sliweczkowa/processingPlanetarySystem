@@ -1,3 +1,6 @@
+import peasy.*;
+PeasyCam cam;
+
 int x = 700;
 int y = 700;
 int n = 0;
@@ -32,6 +35,8 @@ void settings() {
 }
 
 void setup() {
+  cam = new PeasyCam(this, x/2, y/2, 0, 700);
+  
   noStroke();
   
   textureSun = loadImage("textureSun.jpg");
