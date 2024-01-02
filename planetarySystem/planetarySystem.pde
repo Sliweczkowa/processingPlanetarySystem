@@ -35,7 +35,7 @@ void settings() {
 }
 
 void setup() {
-  cam = new PeasyCam(this, x/2, y/2, 0, 700);
+  cam = new PeasyCam(this, sun.bCoordinates.x, sun.bCoordinates.y, sun.bCoordinates.z, x);
   
   noStroke();
   
