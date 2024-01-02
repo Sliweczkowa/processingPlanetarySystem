@@ -21,7 +21,6 @@ class Planet {
     rotateZ(radians((n * bRotationAngle) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
-    fill(this.bColor);
     specular(this.bColor);
     sphere(this.bDiameter/2);
     this.bCoordinates.x = screenX(0, 0, 0);
