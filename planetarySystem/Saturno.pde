@@ -1,20 +1,20 @@
 class Saturno {
   Point bAnchorPointCoordinates;
   int bDistanceFromAnchorPoint;
-  float bRotationAngle;
+  float bAngularSpeed;
   Point bCoordinates;
   
-  Saturno(Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
+  Saturno(Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bAngularSpeed) {
     this.bAnchorPointCoordinates = bAnchorPointCoordinates;
     this.bDistanceFromAnchorPoint = bDistanceFromAnchorPoint;
-    this.bRotationAngle = bRotationAngle;
+    this.bAngularSpeed = bAngularSpeed;
     bCoordinates = new Point(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y + bDistanceFromAnchorPoint, bAnchorPointCoordinates.z);
   }
 
   void drawSaturno(int n) {
     pushMatrix();
     translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y, bAnchorPointCoordinates.z);
-    rotateZ(radians((n * bRotationAngle) % 360));
+    rotateZ(radians((n * bAngularSpeed) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
     shape(globePlanet);
