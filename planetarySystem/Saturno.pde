@@ -13,7 +13,7 @@ class Saturno {
 
   void drawSaturno(int n) {
     pushMatrix();
-    translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y, 0);
+    translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y, bAnchorPointCoordinates.z);
     rotateZ(radians((n * bRotationAngle) % 360));
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
