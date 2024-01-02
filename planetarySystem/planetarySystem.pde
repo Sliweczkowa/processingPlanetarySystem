@@ -24,7 +24,7 @@ Moon europa = new Moon(#DCDCDC, 3, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 1, 4);
 Moon ganymede = new Moon(#DCDCDC, 5, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 3 + 3 + 2, 1.6);
 Moon callisto = new Moon(#DCDCDC, 5, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 3 + 3 + 5 + 3 + 2, 0.8);
 
-Saturno saturno = new Saturno(sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17 + 20 + 9 + 40 + 40 + 80, 0.5);
+Saturno saturno = new Saturno(sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17 + 20 + 9 + 40 + 40 + 80, 0.05);
 
 
 void settings() {
@@ -46,6 +46,7 @@ void setup() {
 
 void draw() {
   background(0);
+  
   sun.drawSun(n);
   mercury.drawPlanet(n);
   venus.drawPlanet(n);

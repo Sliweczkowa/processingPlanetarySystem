@@ -20,6 +20,7 @@ class Sun {
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
     shape(globeSun);
+    lightSpecular(250, 255, 234);
     pointLight(250, 255, 234, 0, 0, 0);
     this.bCoordinates.x = screenX(0, 0, 0);
     this.bCoordinates.y = screenY(0, 0, 0);

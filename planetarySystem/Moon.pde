@@ -5,7 +5,7 @@ class Moon {
   int bDistanceFromAnchorPoint;
   float bRotationAngle;
   Point bCoordinates;
-  
+
   Moon(int bColor, int bDiameter, Point bAnchorPointCoordinates, int bDistanceFromAnchorPoint, float bRotationAngle) {
     this.bColor = bColor;
     this.bDiameter = bDiameter;
@@ -14,7 +14,7 @@ class Moon {
     this.bRotationAngle = bRotationAngle;
     bCoordinates = new Point(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y + bDistanceFromAnchorPoint, bAnchorPointCoordinates.z);
   }
-  
+
   void drawMoon(int n) {
     pushMatrix();
     translate(bAnchorPointCoordinates.x, bAnchorPointCoordinates.y, 0);
@@ -22,6 +22,7 @@ class Moon {
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
     fill(this.bColor);
+    specular(this.bColor);
     box(this.bDiameter);
     this.bCoordinates.x = screenX(0, 0, 0);
     this.bCoordinates.y = screenY(0, 0, 0);
