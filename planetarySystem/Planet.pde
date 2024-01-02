@@ -23,8 +23,9 @@ class Planet {
     translate(0, this.bDistanceFromAnchorPoint, 0);
     specular(this.bColor);
     sphere(this.bDiameter/2);
-    this.bCoordinates.x = screenX(0, 0, 0);
-    this.bCoordinates.y = screenY(0, 0, 0);
+    this.bCoordinates.x = modelX(0, 0, 0);
+    this.bCoordinates.y = modelY(0, 0, 0);
+    this.bCoordinates.z = modelZ(0, 0, 0);
     popMatrix();
     popMatrix();
   }

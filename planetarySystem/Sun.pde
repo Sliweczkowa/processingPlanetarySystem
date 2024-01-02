@@ -22,8 +22,9 @@ class Sun {
     shape(globeSun);
     lightSpecular(250, 255, 234);
     pointLight(250, 255, 234, 0, 0, 0);
-    this.bCoordinates.x = screenX(0, 0, 0);
-    this.bCoordinates.y = screenY(0, 0, 0);
+    this.bCoordinates.x = modelX(0, 0, 0);
+    this.bCoordinates.y = modelY(0, 0, 0);
+    this.bCoordinates.z = modelZ(0, 0, 0);
     popMatrix();
     popMatrix();
   }

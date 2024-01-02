@@ -18,8 +18,9 @@ class Saturno {
     pushMatrix();
     translate(0, this.bDistanceFromAnchorPoint, 0);
     shape(globePlanet);
-    this.bCoordinates.x = screenX(0, 0, 0);
-    this.bCoordinates.y = screenY(0, 0, 0);
+    this.bCoordinates.x = modelX(0, 0, 0);
+    this.bCoordinates.y = modelY(0, 0, 0);
+    this.bCoordinates.z = modelZ(0, 0, 0);
     popMatrix();
     popMatrix();
   }

@@ -23,8 +23,9 @@ class Moon {
     translate(0, this.bDistanceFromAnchorPoint, 0);
     specular(this.bColor);
     box(this.bDiameter);
-    this.bCoordinates.x = screenX(0, 0, 0);
-    this.bCoordinates.y = screenY(0, 0, 0);
+    this.bCoordinates.x = modelX(0, 0, 0);
+    this.bCoordinates.y = modelY(0, 0, 0);
+    this.bCoordinates.z = modelZ(0, 0, 0);
     popMatrix();
     popMatrix();
   }
