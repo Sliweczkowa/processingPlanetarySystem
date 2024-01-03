@@ -45,6 +45,8 @@ void setup() {
 void draw() {
   background(0);
   
+  directionalLight(50, 50, 50, -1, sun.bCoordinates.y, 0);
+  
   sun.drawSun(n);
   mercury.drawPlanet(n);
   venus.drawPlanet(n);
