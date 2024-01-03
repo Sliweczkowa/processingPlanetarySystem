@@ -19,9 +19,11 @@ class Sun {
       rotateZ(radians((n * bAngularSpeed) % 360));
       pushMatrix();
         translate(0, this.bDistanceFromAnchorPoint, 0);
-        shape(globeSun);
         lightSpecular(250, 255, 234);
         pointLight(250, 255, 234, 0, 0, 0);
+        emissive(247, 176, 52);
+        sphere(this.bDiameter/2);
+        emissive(0, 0, 0);
         this.bCoordinates.x = modelX(0, 0, 0);
         this.bCoordinates.y = modelY(0, 0, 0);
         this.bCoordinates.z = modelZ(0, 0, 0);

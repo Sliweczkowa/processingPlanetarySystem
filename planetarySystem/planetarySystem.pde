@@ -5,9 +5,6 @@ int x = 700;
 int y = 700;
 int n = 0;
 
-PImage textureSun;
-PShape globeSun;
-
 PImage textureSaturno;
 PShape globePlanet;
 
@@ -38,10 +35,6 @@ void setup() {
   cam = new PeasyCam(this, sun.bCoordinates.x, sun.bCoordinates.y, sun.bCoordinates.z, x);
   
   noStroke();
-  
-  textureSun = loadImage("textureSun.jpg");
-  globeSun = createShape(SPHERE, sun.bDiameter/2);
-  globeSun.setTexture(textureSun);
   
   textureSaturno = loadImage("saturno/2k_saturn.jpg");
   globePlanet = loadShape("saturno/saturno.obj");
