@@ -8,6 +8,8 @@ int n = 0;
 PImage textureSaturno;
 PShape globePlanet;
 
+PShape spaceship;
+
 Sun sun = new Sun(201, new Point(x/2, y/2, 0), 0, 0);
 
 Planet mercury = new Planet(#808080, 7, sun.bCoordinates, 100 + 20 + 3, 4.1);
@@ -26,6 +28,10 @@ Moon callisto = new Moon(#DCDCDC, 5, jupiter.bCoordinates, 40 + 3 + 3 + 3 + 3 + 
 
 Saturno saturno = new Saturno(sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17 + 20 + 9 + 40 + 40 + 80, 0.05);
 
+int spaceshipX = 100;
+int spaceshipY = 100;
+int spaceshipZ = 100;
+
 
 void settings() {
   size(x, y, P3D);
@@ -40,6 +46,9 @@ void setup() {
   globePlanet = loadShape("saturno/saturno.obj");
   globePlanet.scale(0.005);
   globePlanet.setTexture(textureSaturno);
+  
+  spaceship = loadShape("Space_rocket.obj");
+  spaceship.rotate(PI);
 }
 
 void draw() {
@@ -61,6 +70,30 @@ void draw() {
   ganymede.drawMoon(n);
   callisto.drawMoon(n);
   saturno.drawSaturno(n);
+  
+  if(keyPressed) {
+    if(key == 'w') {
+      spaceshipY -= 5;
+    }
+    if(key == 's') {
+      spaceshipY += 5;
+    }
+    if(key == 'a') {
+      spaceshipX -= 5;
+    }
+    if(key == 'd') {
+      spaceshipX += 5;
+    }
+    if(key == 'q') {
+      spaceshipZ -= 5;
+    }
+    if(key == 'e') {
+      spaceshipZ += 5;
+    }
+  }
+  
+  drawSpaceship(spaceshipX, spaceshipY, spaceshipZ);
+  
   
   n++;
 }
