@@ -31,6 +31,7 @@ Saturno saturno = new Saturno(sun.bCoordinates, 100 + 20 + 7 + 20 + 15 + 20 + 17
 int spaceshipX = 100;
 int spaceshipY = 100;
 int spaceshipZ = 100;
+String spaceshipDirection = "north";
 
 
 void settings() {
@@ -48,7 +49,6 @@ void setup() {
   globePlanet.setTexture(textureSaturno);
   
   spaceship = loadShape("Space_rocket.obj");
-  spaceship.rotate(PI);
 }
 
 void draw() {
@@ -74,25 +74,31 @@ void draw() {
   if(keyPressed) {
     if(key == 'w') {
       spaceshipY -= 5;
+      spaceshipDirection = "north";
     }
     if(key == 's') {
       spaceshipY += 5;
+      spaceshipDirection = "south";
     }
     if(key == 'a') {
       spaceshipX -= 5;
+      spaceshipDirection = "west";
     }
     if(key == 'd') {
       spaceshipX += 5;
+      spaceshipDirection = "east";
     }
     if(key == 'q') {
       spaceshipZ -= 5;
+      spaceshipDirection = "q";
     }
     if(key == 'e') {
       spaceshipZ += 5;
+      spaceshipDirection = "e";
     }
   }
   
-  drawSpaceship(spaceshipX, spaceshipY, spaceshipZ);
+  drawSpaceship(spaceshipX, spaceshipY, spaceshipZ, spaceshipDirection);
   
   
   n++;
