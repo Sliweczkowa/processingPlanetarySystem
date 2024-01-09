@@ -22,14 +22,14 @@ void drawSpaceship(float x, float y, float z, String direction) {
         spaceship.rotate(PI/2);
         break;
       case "q":
-        spaceship.rotate(PI);
+        spaceship.rotateX(-PI/2);
         shape(spaceship);
-        spaceship.rotate(-PI);
+        spaceship.rotateX(PI/2);
         break;
       case "e":
-        spaceship.rotate(PI);
+        spaceship.rotateX(PI/2);
         shape(spaceship);
-        spaceship.rotate(-PI);
+        spaceship.rotateX(-PI/2);
         break;
     }
   
