@@ -72,30 +72,7 @@ void draw() {
   saturno.drawSaturno(n);
   
   if(keyPressed) {
-    if(key == 'w') {
-      spaceshipY -= 5;
-      spaceshipDirection = "north";
-    }
-    if(key == 's') {
-      spaceshipY += 5;
-      spaceshipDirection = "south";
-    }
-    if(key == 'a') {
-      spaceshipX -= 5;
-      spaceshipDirection = "west";
-    }
-    if(key == 'd') {
-      spaceshipX += 5;
-      spaceshipDirection = "east";
-    }
-    if(key == 'q') {
-      spaceshipZ -= 5;
-      spaceshipDirection = "q";
-    }
-    if(key == 'e') {
-      spaceshipZ += 5;
-      spaceshipDirection = "e";
-    }
+    keyIsPressed(key);
   }
   
   drawSpaceship(spaceshipX, spaceshipY, spaceshipZ, spaceshipDirection);
