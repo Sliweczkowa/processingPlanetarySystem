@@ -49,6 +49,8 @@ void setup() {
   globePlanet.setTexture(textureSaturno);
   
   spaceship = loadShape("Space_rocket.obj");
+  spaceship.setFill(color(255, 255, 255));
+  
 }
 
 void draw() {
@@ -77,6 +79,9 @@ void draw() {
   
   drawSpaceship(spaceshipX, spaceshipY, spaceshipZ, spaceshipDirection);
   
+  for(Missile missile : missiles) {
+     missile.drawMissile();
+  }
   
   n++;
 }
